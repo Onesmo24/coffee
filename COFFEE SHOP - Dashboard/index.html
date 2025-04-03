@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE SHOP - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">COFFEE SHOP</div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('menu')">Menu</a></li>
+                <li><a href="#" onclick="showPage('order')">Order</a></li>
+                <li><a href="#" onclick="showPage('dashboard')">Dashboard</a></li>
+                <li><a href="#" onclick="showModal('loginModal')">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page">
+        <div class="hero">
+            <h1>Welcome to Our Coffee Shop</h1>
+            <p>Explore our selection of premium coffee and treats, crafted with care and the finest ingredients.</p>
+            <a href="#" class="btn" onclick="showPage('menu')">Order Online</a>
+        </div>
+
+        <div class="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Latte</h3>
+                        <p>Smooth espresso with steamed milk</p>
+                        <span class="price">$4.00</span>
+                        <button class="add-to-cart" onclick="addToCart('Latte', 4.00)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1534778101976-62847782c213');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cappuccino</h3>
+                        <p>Espresso with equal parts steamed milk and foam</p>
+                        <span class="price">$3.50</span>
+                        <button class="add-to-cart" onclick="addToCart('Cappuccino', 3.50)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Espresso</h3>
+                        <p>Strong, concentrated coffee</p>
+                        <span class="price">$2.50</span>
+                        <button class="add-to-cart" onclick="addToCart('Espresso', 2.50)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1515442261605-65987783cb6a');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mocha</h3>
+                        <p>Espresso with chocolate and steamed milk</p>
+                        <span class="price">$4.50</span>
+                        <button class="add-to-cart" onclick="addToCart('Mocha', 4.50)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menu" class="page" style="display: none;">
+        <div class="products">
+            <h2>Our Full Menu</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Latte</h3>
+                        <p>Smooth espresso with steamed milk</p>
+                        <span class="price">$4.00</span>
+                        <button class="add-to-cart" onclick="addToCart('Latte', 4.00)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1534778101976-62847782c213');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cappuccino</h3>
+                        <p>Espresso with equal parts steamed milk and foam</p>
+                        <span class="price">$3.50</span>
+                        <button class="add-to-cart" onclick="addToCart('Cappuccino', 3.50)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Espresso</h3>
+                        <p>Strong, concentrated coffee</p>
+                        <span class="price">$2.50</span>
+                        <button class="add-to-cart" onclick="addToCart('Espresso', 2.50)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1515442261605-65987783cb6a');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mocha</h3>
+                        <p>Espresso with chocolate and steamed milk</p>
+                        <span class="price">$4.50</span>
+                        <button class="add-to-cart" onclick="addToCart('Mocha', 4.50)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Americano</h3>
+                        <p>Espresso with hot water</p>
+                        <span class="price">$3.00</span>
+                        <button class="add-to-cart" onclick="addToCart('Americano', 3.00)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1534778101976-62847782c213');">
+                    </div>
+                    <div class="product-info">
+                        <h3>Flat White</h3>
+                        <p>Espresso with microfoam</p>
+                        <span class="price">$4.00</span>
+                        <button class="add-to-cart" onclick="addToCart('Flat White', 4.00)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Page -->
+    <div id="order" class="page" style="display: none;">
+        <div class="dashboard">
+            <h2>Your Order</h2>
+            <div class="cart">
+                <div id="cart-items">
+                    <!-- Cart items will be added here dynamically -->
+                    <p>Your cart is empty</p>
+                </div>
+                <div id="cart-total" class="cart-total">
+                    Total: $0.00
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard" class="page" style="display: none;">
+        <div class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Today's Orders</h3>
+                    <p id="today-orders">12</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Monthly Revenue</h3>
+                    <p id="monthly-revenue">$3,245.50</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Popular Item</h3>
+                    <p id="popular-item">Latte</p>
+                </div>
+            </div>
+
+            <h3>Recent Orders</h3>
+            <div class="cart">
+                <div class="cart-item">
+                    <span>Order #1001</span>
+                    <span>Latte, Cappuccino - $7.50</span>
+                </div>
+                <div class="cart-item">
+                    <span>Order #1002</span>
+                    <span>Mocha - $4.50</span>
+                </div>
+                <div class="cart-item">
+                    <span>Order #1003</span>
+                    <span>Espresso, Americano - $5.50</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 COFFEE SHOP. All rights reserved.</p>
+        <p>cogfac.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
